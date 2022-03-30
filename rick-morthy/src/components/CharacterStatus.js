@@ -8,8 +8,8 @@ const CharacterStatus = ({checked,setChecked}) => {
     }
 
     return <div className="container">
-        <form className="status">
-            <div className="check">
+        <form className="pt-6 m-0 flex justify-center md:justify-start align-items-center bg-primary">
+            <div className="ml-0 md:ml-24">
                 <label>
                     <input
                         type="radio"
@@ -21,7 +21,7 @@ const CharacterStatus = ({checked,setChecked}) => {
                     Any
                 </label>
             </div>
-            <div className="check">
+            <div className="ml-2.5 md: ml-3">
                 <label>
                     <input
                         type="radio"
@@ -34,7 +34,7 @@ const CharacterStatus = ({checked,setChecked}) => {
                 </label>
             </div>
 
-            <div className="check">
+            <div className="ml-2.5 md: ml-3">
                 <label>
                     <input
                         type="radio"
@@ -46,7 +46,7 @@ const CharacterStatus = ({checked,setChecked}) => {
                     Dead
                 </label>
             </div>
-            <div className="check">
+            <div className="ml-2.5 md: ml-3">
                 <label>
                     <input
                         type="radio"

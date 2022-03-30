@@ -1,15 +1,14 @@
 import React from "react";
 import {motion} from "framer-motion";
-import "../App.css"
 
 const Characters = ({character}) => {
     return (
-        <motion.div layout className="single_character">
-            <img src={character.image} alt=""></img>
-            <div className="characters_name">
-                <p className="name">{character.name}</p>
+        <div className="flex flex-col m-2.5 w-48">
+            <img className="rounded-t-lg hover:border-2 border-primary rounded-lg" src={character.image} alt=""></img>
+            <div className="p-3.5 w-full rounded-b-lg bg-white">
+                <p className="font-bold font-sans">{character.name}</p>
             </div>
-        </motion.div>
+        </div>
     )
 }
 

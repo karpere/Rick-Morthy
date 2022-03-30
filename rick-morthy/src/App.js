@@ -2,8 +2,7 @@ import {useState, useEffect} from "react";
 import Characters from "./components/Characters"
 import Navi from "./components/Navi";
 import CharacterStatus from "./components/CharacterStatus";
-import {motion} from "framer-motion"
-import './App.css'
+import './index.css'
 import './reset.css'
 
 function App() {
@@ -16,7 +15,6 @@ function App() {
     //Gets characters from API
 
     useEffect(() => {
-
         fetch(`https://rickandmortyapi.com/api/character/?name=${filterCharacter}&status=${checked}&page=1`)
             .then(data => data.json())
             .then(data => {data?.results?.length ? setCharacters(data.results): setCharacters([])
@@ -26,6 +24,7 @@ function App() {
     //Infinite Scroll
 
     useEffect(() => {
+
         let pages = 2
 
         const handleScroll = (event,) => {
@@ -64,13 +63,14 @@ function App() {
     }
 
     return (
-        <div  className=''>
+        <div  className='container max-w-5xl'>
             <Navi placeholder="Search..." handleFilter={handleFilter}/>
             <CharacterStatus checked={checked} setChecked={setChecked}/>
-            <div className='characters_section' >
-                {characters.length !== 0 && characters.map((value, i) => {
+            <div className="container">
+                <div className='flex justify-center flex-wrap bg-primary' >
+                    {characters.length !== 0 && characters.map((value, i) => {
                     return <Characters key={`${value.id}-${i}`} character={value}/>
-                })}
+                })}</div>
             </div>
         </div>
 
