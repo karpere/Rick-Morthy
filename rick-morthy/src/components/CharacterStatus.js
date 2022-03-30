@@ -8,8 +8,8 @@ const CharacterStatus = ({checked,setChecked}) => {
     }
 
     return <div className="container">
-        <form className="pt-6 m-0 flex justify-center md:justify-start align-items-center bg-primary">
-            <div className="ml-0 md:ml-24">
+        <form className="pt-6 m-0 flex justify-center sm:justify-start align-items-center bg-primary">
+            <div className="ml-0 sm:ml-4 md:ml-20 lg:ml-24" >
                 <label>
                     <input
                         type="radio"
