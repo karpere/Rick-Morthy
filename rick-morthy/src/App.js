@@ -2,6 +2,7 @@ import {useState, useEffect} from "react";
 import Characters from "./components/Characters"
 import Navi from "./components/Navi";
 import CharacterStatus from "./components/CharacterStatus";
+import {motion} from "framer-motion";
 import './index.css'
 import './reset.css'
 
@@ -62,15 +63,16 @@ function App() {
 
     }
 
+
     return (
         <div  className='container max-w-5xl'>
-            <Navi placeholder="Search..." handleFilter={handleFilter}/>
-            <CharacterStatus checked={checked} setChecked={setChecked}/>
+            <Navi/>
+            <CharacterStatus checked={checked} setChecked={setChecked} placeholder="Search..." handleFilter={handleFilter}/>
             <div className="container">
-                <div className='flex justify-center flex-wrap bg-primary' >
+                <motion.div className='flex justify-center flex-wrap bg-primary' >
                     {characters.length !== 0 && characters.map((value, i) => {
                     return <Characters key={`${value.id}-${i}`} character={value}/>
-                })}</div>
+                })}</motion.div>
             </div>
         </div>
 

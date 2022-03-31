@@ -6,7 +6,8 @@ module.exports = {
     },
     extend: {
       colors:{
-        primary: "rgba(43, 43, 44, 0.08)"
+        primary: "rgba(43, 43, 44, 0.08)",
+        hover: "rgba(43, 43, 44,)"
       }
     },
   },
