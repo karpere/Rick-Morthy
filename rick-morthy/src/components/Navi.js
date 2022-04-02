@@ -35,11 +35,10 @@ const Navi = () => {
                 </div>
             ) : (
                 <div className="flex items-center">
-                    <h1 className="bg-primary">{currentUser?.email}</h1>
                     <motion.button onClick={handleLogOut} whileTap={{scale: 0.9}} whileHover={{scale: 1.05}}
                                    className="text-lg font-sans font-medium md:mr-24 border-2
                                    border-solid border-primary px-1 py-1
-                                   rounded-lg bg-primary">Log Out
+                                   rounded-lg bg-primary mr-4">Log Out
                     </motion.button>
                 </div>
 
