@@ -11,14 +11,12 @@ import Register from "./components/Login/Register";
 
 
 const Index = () => {
-    const [authenticated, setAuthenticated] = useState(false);
-    const [user,setUser] = useState({});
 
     return (
             <BrowserRouter>
                 <Routes>
-                            <Route path="/" element={<App authenticated={authenticated} setAuthenticated={setAuthenticated} user={user} setUser={setUser}/>}/>
-                            <Route path="/login" element={<Login authenticated={authenticated} setAuthenticated={setAuthenticated} user={user} setUser={setUser}/>}/>
+                            <Route path="/" element={<App/>}/>
+                            <Route path="/login" element={<Login/>}/>
                             <Route path="/register" element={<Register/>}/>
                 </Routes>
             </BrowserRouter>
