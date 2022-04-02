@@ -7,8 +7,8 @@ const CharacterStatus = ({checked,setChecked,placeholder, handleFilter}) => {
         setChecked(event.target.value)
     }
 
-    return <div className="container d-block text-center sm:flex sm:justify-between sm:align-center bg-primary pt-4">
-        <form className="pt-4 m-0 flex justify-center sm:justify-start align-center text-lg">
+    return <div className="container d-block text-center sm:flex sm:justify-between sm:align-center bg-primary pt-4 font-sans">
+        <form className="pt-4 m-0 flex justify-center sm:justify-start align-center pb-4 pr-4 md:pr-0 text-md">
             <p className="ml-0 sm:ml-4 md:ml-20 lg:ml-24">Character status:</p>
             <div className="ml-2.5 md: ml-3" >
                 <label>
@@ -60,7 +60,7 @@ const CharacterStatus = ({checked,setChecked,placeholder, handleFilter}) => {
                 </label>
             </div>
         </form>
-        <input type="text" placeholder={placeholder} className="h-[40px] w-[250px] md:w-[250px] pl-1  mr-4 md:mr-20 lg:mr-24 rounded border-2 border-gray-300 font-sans" onChange={handleFilter}/>
+        <input type="text" placeholder={placeholder} className="h-[40px] w-[250px] md:w-[250px] pl-1 mb-4 mr-4 md:mr-20 lg:mr-24 rounded border-2 border-gray-300 font-sans" onChange={handleFilter}/>
     </div>
 }
 
