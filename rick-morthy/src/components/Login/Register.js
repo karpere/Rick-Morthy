@@ -6,9 +6,9 @@ import {useAuth} from "../../auth/config";
 import {motion} from "framer-motion";
 
 const Register = () => {
-    const emailRef = useRef('');
-    const passwordRef = useRef('');
-    const passwordConfirmRef = useRef('')
+    const emailRef = useRef(null);
+    const passwordRef = useRef(null);
+    const passwordConfirmRef = useRef(null)
     const [loading, setLoading] = useState(false)
     const currentUser = useAuth()
 
